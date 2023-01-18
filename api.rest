@@ -1,0 +1,10 @@
+GET http://localhost:5000/api/products HTTP/1.1
+content-type: application/json
+
+{
+    "name": "product 01",
+    "price":69,
+    "description": "this is very good product",
+    "imageUrl":"https://res.cloudinary.com/dsuh9ww6d/image/upload/v1672897809/bike_d9fcb8.png"
+
+}
