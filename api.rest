@@ -1,4 +1,4 @@
-GET http://localhost:5000/api/products HTTP/1.1
+GET https://assignment-10-server-tawny.vercel.app/api/products HTTP/1.1
 content-type: application/json
 
 {
