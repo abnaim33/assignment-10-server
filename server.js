@@ -1,5 +1,4 @@
 const { default: mongoose } = require("mongoose");
-const cloudinary = require('cloudinary')
 const express = require('express')
 const app = express()
 const cors = require('cors')
@@ -27,22 +26,8 @@ app.get("/", (req, res) => {
 })
 
 
-app.use((req, res, next) => {
-    const err = new Error('Not Found');
-    err.status = 404;
-    next(err);
-});
 
-app.use((err, req, res, next) => {
-    res.locals.error = err;
-    const status = err.status || 500;
-    res.status(status);
-    res.status(err.status || 500);
-    res.json({
-        message: err.message,
-        error: err
-    });
-});
+
 
 
 app.listen(process.env.PORT, () => console.log(`server is running on port ${process.env.PORT}`))
